@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        background-color: #D9D1E0;
+    }
+
+    #output {
+        position: relative;
+        left: 20rem;
+        top: 2rem;
+        width: 40rem;
+        background-color: #E3164B;
+        border-radius: 1.8rem;
+        padding: 2.5rem;
+    }
+
+    @media screen and (max-width: 400px) {
+        #output {
+            left: 1rem;
+            width: 21.5rem;
+        }
+    }
+
+    @media screen and (min-width: 410px) {
+        #output {
+            left: 2.4rem;
+            width: 21.5rem;
+        }
+    }
+
+    @media screen and (min-width: 1000px) {
+        #output {
+            left: 20rem;
+            width: 40rem;
+        }
+    }
+
+    #output1 {
+        position: relative;
+        left: 20rem;
+        top: -2rem;
+        width: 40rem;
+        border-radius: 0rem 0rem 1.8rem 1.8rem;
+        padding: 2.5rem;
+        background-color: burlywood;
+        display: none;
+        height: 34rem;
+    }
+
+    @media screen and (max-width: 400px) {
+        #output1 {
+            left: 1rem;
+            width: 21.5rem;
+            height: 39rem;
+            padding: 1.5rem;
+            top: 0rem;
+        }
+    }
+
+    @media screen and (min-width: 410px) {
+        #output1 {
+            top: 0rem;
+            left: 2.4rem;
+            width: 21.5rem;
+            height: 38rem;
+            padding: 1.2rem;
+        }
+    }
+
+    @media screen and (min-width: 1000px) {
+        #output1 {
+            left: 20rem;
+            width: 40rem;
+        height: 34rem;
+        padding: 2.5rem;
+
+        }
+    }
+
+    #night {
+        position: relative;
+        left: 34.5rem;
+        top: -6.5rem;
+        width: 5rem;
+    }
+
+    #search {
+        /* opacity: 2; */
+        margin-top: 2.5rem;
+    }
+
+    #input {
+        width: 33.5rem;
+        height: 3rem;
+        border-radius: .6rem;
+        padding-left: 20px;
+        margin-left: .5rem;
+    }
+
+    @media screen and (max-width: 450px) {
+        #input {
+            width: 20rem;
+            margin-left: -1.6rem;
+        }
+    }
+
+    #btn {
+        position: relative;
+        top: -2.4rem;
+        left: 31.7rem;
+        height: 1.7rem;
+    }
+
+    @media screen and (max-width: 450px) {
+        #btn {
+            left: 16.2rem;
+        }
+    }
+
+    #audio {
+        position: relative;
+        top: -8rem;
+    }
+
+    #word {
+        font-size: 5rem;
+        width: 10rem;
+        /* margin-top: 10rem; */
+    }
+
+    @media screen and (max-width: 450px) {
+        #word {
+            font-size: 4rem;
+
+        }
+    }
+
+    #lang {
+        font-size: 1.7rem;
+    }
+
+    #play {
+        position: relative;
+        left: 30.5rem;
+        top: -10.4rem;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    @media screen and (max-width: 450px) {
+        #play {
+            left: 14rem;
+            top: -9.3rem;
+        }
+    }
+
+    #meaning {
+        width: 40rem;
+    }
+
+    #info {
+        position: relative;
+        top: -5rem;
+    }
+
+    #logo {
+        border-radius: .6rem;
+        border: 1mm solid black;
+        height: 7rem;
+        width: 5rem;
+        /* margin-top: -2rem; */
+    }
+
+    @media screen and (max-width: 450px) {
+        #logo {
+            margin-left: -1rem;
+        }
+    }
+
+    button {
+        margin-left: 10rem;
+    }
+
+    #darkmode {
+        position: relative;
+        top: 0rem;
+        left: 22rem;
+        color: blueviolet;
+        height: 2rem;
+        /* height: 5rem; */
+    }
+
+    @media screen and (max-width: 450px) {
+        #darkmode {
+            left: 7.5rem;
+        }
+    }
+
+    #dd {
+        margin-top: -.5rem;
+    }
+
+    #ll {
+        margin-top: -.5rem;
+    }
+
+    #meaning1 {
+        width: 36rem;
+    }
+
+    @media screen and (max-width: 450px) {
+        #meaning1 {
+            width: 18rem;
+        }
+    }
+
+    #meaning2 {
+        width: 36rem;
+    }
+
+    @media screen and (max-width: 450px) {
+        #meaning2 {
+            width: 18rem;
+        }
+    }
+
+    #example {
+        width: 36rem;
+    }
+
+    @media screen and (max-width: 450px) {
+        #example {
+            width: 18rem;
+        }
+    }
+
+    #source { 
+        cursor: pointer;
+        width: 36rem;
+    }
+
+    @media screen and (max-width: 450px) {
+        #source {
+            width: 18rem;
+        }
+    }
+</style>
+
+<body id="body">
+    <div id="output">
+        <img id="logo" src="lightmode.jpg" alt="" `height="20rem" width="70rem">
+
+
+        <div id="darkmode" class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input onclick="lightmode()" type="radio" class="btn-check" name="btnradio" id="btnradio1"
+                autocomplete="off" checked>
+            <label class="btn btn-outline-warning" for="btnradio1"><img id="dd" src="moon.png" alt="error"
+                    height="23rem" width="23rem"></label>
+
+            <input onclick="darkmode()" type="radio" class="btn-check" name="btnradio" id="btnradio2"
+                autocomplete="off">
+            <label class="btn btn-outline-light" for="btnradio2"><img id="ll" src="night-mode.png" alt="" height="20rem"
+                    width="20rem"></label>
+        </div>
+
+
+        <div id="search">
+            <input id="input" type="" placeholder="Search the word here...">
+            <img id="btn" src="magnifying-glass-solid.svg" alt="">
+        </div>
+        <audio id="sound" src=""></audio>
+    </div>
+    <div id="output1"></div>
+
+    <script src="dictionary.js"></script>
+</body>
+
+</html>
